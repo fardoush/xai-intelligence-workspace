@@ -3,6 +3,7 @@
 import DashboardPreview from "@/components/Dashboard/DashboardPreview";
 import Hero from "@/components/Hero";
 import InsightFlow from "@/components/InsightFlow/InsightFlow";
+import SignatureInteraction from "@/components/SignatureInteraction/SignatureInteraction";
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero/>
       <InsightFlow/>
       <DashboardPreview/>
+      <SignatureInteraction/>
     </div>
   );
 }

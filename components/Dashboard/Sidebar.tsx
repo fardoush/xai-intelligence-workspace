@@ -25,7 +25,6 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                     const IconComponent = item.icon;
 
                     return (
-
                         <button
                             key={item.value}
                             onClick={() => setActiveTab(item.value)}

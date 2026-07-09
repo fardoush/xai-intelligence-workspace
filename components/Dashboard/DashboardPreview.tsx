@@ -9,7 +9,7 @@ import Automations from './Automations/Automations';
 const DashboardPreview = () => {
     const [activeTab, setActiveTab] = useState("dashboard");
     return (
-        <div className='max-w-7xl mx-auto px-5 py-20 md:py-32'>
+        <div className='max-w-7xl mx-auto px-3 md:px-5 py-20 md:py-32'>
             <div className="mb-14  md:mb-20">
                 <p className="text-xs tracking-widest uppercase text-teal-500 font-mono">The workspace</p>
                 <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
@@ -34,7 +34,7 @@ const DashboardPreview = () => {
                     <Sidebar activeTab={activeTab}
                         setActiveTab={setActiveTab} />
                     {/* main content  */}
-                    <main className="flex-1 p-6 space-y-8 min-h-screen  md:min-h-[600px] ">
+                    <main className="flex-1 px-4 py-6 md:px-5 lg:px-6 space-y-8 min-h-screen  md:min-h-[600px] ">
                         {activeTab === "dashboard" && (
                             <>
                                 <Dashboard />

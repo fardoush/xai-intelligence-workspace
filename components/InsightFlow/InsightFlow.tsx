@@ -54,17 +54,15 @@ const InsightFlow = () => {
             {/* main area scroll track  */}
             <div ref={containerRef} className="relative md:pl-12">
                 {/* right side progressbar  */}
-                <div className="absolute left-0 top-4 hidden h-[calc(100%-40px)] w-px bg-neutral-800 md:block">
-
+                <div className="absolute left-0 top-4 hidden h-[calc(100%-40px)] w-[2px] bg-[#0B1118] md:block">
                     <motion.div
                         style={{ scaleY }}
-                        className='h-full w-full origin-top bg-gradient-to-b from-teal-500 to-emerald-400 shadow-[0_0_8px_rgba(20,184,166,0.5)]'
+                        className='h-full w-full origin-top bg-gradient-to-b from-teal-500 to-teal-400 shadow-[0_0_8px_rgba(20,184,166,0.5)]'
                     />
-
                 </div>
 
                 {/* flow card  */}
-                <div className="flex flex-col gap-12">
+                <div className="flex flex-col gap-8">
                     {
                         stages.map((stage) => (
                             <StageCard key={stage.id} stage={stage}></StageCard>

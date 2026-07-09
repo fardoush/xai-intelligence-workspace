@@ -24,9 +24,9 @@ const Header = () => {
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
                     {["FLOW", "WORKSPACE", "SIGNAL"].map((item) => (
-                        <a 
-                            key={item} 
-                            href={`#${item.toLowerCase()}`} 
+                        <a
+                            key={item}
+                            href={`#${item.toLowerCase()}`}
                             className="text-xs font-medium tracking-widest text-neutral-400 hover:text-teal-400 transition-colors duration-300"
                         >
                             {item}
@@ -43,7 +43,7 @@ const Header = () => {
             {/*  Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -53,15 +53,15 @@ const Header = () => {
                         {/* Navigation Links */}
                         <div className="flex flex-col gap-8">
                             {["FLOW", "WORKSPACE", "SIGNAL"].map((item, index) => (
-                                <motion.a 
+                                <motion.a
                                     key={item}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                                    
-                                    href={`#${item.toLowerCase()}`} 
-                                    onClick={() => setIsOpen(false)} 
+
+                                    href={`#${item.toLowerCase()}`}
+                                    onClick={() => setIsOpen(false)}
                                     className="text-3xl font-light tracking-widest text-neutral-400 hover:text-white transition-colors"
                                 >
                                     {item}

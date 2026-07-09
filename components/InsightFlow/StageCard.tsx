@@ -22,7 +22,7 @@ const StageCard = ({ stage }: StageCardProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.4 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className='group grid grid-cols-1 gap-8 rounded-2xl border border-neutral-800/60 bg-neutral-900/20 p-6 transition-all duration-500 hover:border-teal-500/30 hover:bg-neutral-900/40 sm:p-8 md:grid-cols-[1fr_200px] md:p-10'
+                className='group grid grid-cols-1 gap-8 rounded-2xl border border-neutral-800/60 bg-[#0B1118] p-6 transition-all duration-500 hover:border-teal-500/30  sm:p-8 md:grid-cols-[1fr_200px] md:p-10'
             >
                 {/* Left Side  */}
                 <div className="flex flex-col justify-center">
@@ -35,7 +35,7 @@ const StageCard = ({ stage }: StageCardProps) => {
                     <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300">
                         {text}
                     </p>
-                    <div className="mt-6 h-[2px] w-12 bg-neutral-800 transition-all duration-500 group-hover:w-24 group-hover:bg-teal-500/50" />
+                    <div className="mt-6 h-[2px] w-12 bg-[#0B1118] transition-all duration-500 group-hover:w-24 group-hover:bg-teal-500/50" />
                 </div>
 
                 {/* Right Side  */}
@@ -44,7 +44,7 @@ const StageCard = ({ stage }: StageCardProps) => {
                     <motion.div
                         whileHover={{ scale: 1.05, rotate: 2 }}
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                        className="relative h-36 w-36 overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 flex items-center justify-center transition-colors duration-500 group-hover:border-teal-500/20 shadow-2xl">
+                        className="relative h-36 w-36 overflow-hidden rounded-2xl border border-neutral-800 bg-[#0B1118]  flex items-center justify-center transition-colors duration-500 group-hover:border-teal-500/20 shadow-2xl">
                         <svg viewBox="0 0 200 200" className="h-full w-full text-teal-400 p-2">
                             {isTarget && (
                                 <>

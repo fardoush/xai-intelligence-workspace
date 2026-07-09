@@ -1,3 +1,6 @@
+
+
+import DashboardPreview from "@/components/Dashboard/DashboardPreview";
 import Hero from "@/components/Hero";
 import InsightFlow from "@/components/InsightFlow/InsightFlow";
 
@@ -9,6 +12,7 @@ export default function Home() {
     <div className="">
       <Hero/>
       <InsightFlow/>
+      <DashboardPreview/>
     </div>
   );
 }

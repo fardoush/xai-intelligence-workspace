@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiTwitter, FiLinkedin, FiArrowUpRight } from 'react-icons/fi';
 const Footer = () => {
-  const links: any= {
+  const links: any = {
     product: ['Flow', 'Workspace', 'Signal',],
     company: ['About Us', 'Careers', 'Blog', 'Contact'],
     legal: ['Privacy Policy', 'Terms of Service', 'Security']
@@ -42,9 +42,9 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h4 className="text-teal-400 font-mono text-xs uppercase tracking-widest ">Product</h4>
             <ul className="flex flex-col gap-2 text-sm text-neutral-400">
-              {links.product.map((item) => (
+              {links.product.map((item: any) => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} onClick={(e) => handleScroll(e, item)} className="transition-colors hover:text-white">
+                  <a href={`#${item.toLowerCase()}`} onClick={(e: any) => handleScroll(e, item)} className="transition-colors hover:text-white">
                     {item}
                   </a>
                 </li>
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h4 className="text-teal-400 font-mono text-xs uppercase tracking-widest ">Company</h4>
             <ul className="flex flex-col gap-2 text-sm text-neutral-400">
-              {links.company.map((item) => (
+              {links.company.map((item: any) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`} className="transition-colors hover:text-white">
                     {item}
@@ -102,7 +102,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Xai Inc. All rights reserved.
           </div>
           <div className="flex gap-6">
-            {links.legal.map((item) => (
+            {links.legal.map((item: any) => (
               <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-neutral-300 transition-colors">
                 {item}
               </a>

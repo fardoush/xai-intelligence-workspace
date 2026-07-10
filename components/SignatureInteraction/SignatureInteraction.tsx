@@ -40,7 +40,7 @@ const SignatureInteraction = () => {
         ]
     }
 
-    const getParticleColor = (index) => {
+    const getParticleColor = (index: number) => {
         if (layout === 'raw') return 'bg-slate-600 text-slate-600 shadow-slate-600/40';
 
         const row = Math.floor(index / 10);
@@ -73,7 +73,7 @@ const SignatureInteraction = () => {
             <div className="relative h-[320px] md:h-[400px] lg:h-[500px]  w-full bg-[#0B1118] border border-white/5 rounded-xl ">
 
                 {
-                    positions[layout].map((pos, i) => (
+                    positions[layout as keyof typeof positions].map((pos: any, i: any) => (
                         <motion.div
                             key={i}
                             animate={{ left: `${pos.x}%`, top: `${pos.y}%` }}

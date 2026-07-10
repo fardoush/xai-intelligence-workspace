@@ -13,7 +13,7 @@ const [activeSection, setActiveSection] = useState('hero');
         return () => { document.body.style.overflow = 'unset'; };
     }, [isOpen]);
 
-    const handleScroll = (e, id) => {
+    const handleScroll = (e: any, id: any) => {
         e.preventDefault(); 
         setIsOpen(false);  
         const targetId = id.toLowerCase();
@@ -32,7 +32,7 @@ const [activeSection, setActiveSection] = useState('hero');
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
                 {/* Logo */}
                 <a href="#hero" 
-    onClick={(e) => handleScroll(e, "hero")} 
+    onClick={(e: any) => handleScroll(e, "hero")} 
     className="flex items-center gap-3 cursor-pointer group">
                     <div className="bg-teal-500 text-black font-bold w-8 h-8 flex items-center justify-center rounded-[4px] text-lg">X</div>
                     <div className="font-bold text-white tracking-tight text-xl">Xai</div>

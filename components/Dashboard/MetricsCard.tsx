@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const MetricsCard = ({ metric }) => {
+const MetricsCard = ( {metric}: { metric: any } ) => {
     const { title, value, change } = metric;
     return (
         <div className='w-full p-4 rounded-lg border border-white/10 hover:border-teal-600 transition-all duration-500'>

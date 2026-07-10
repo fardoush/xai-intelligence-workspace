@@ -2,9 +2,9 @@
 import React from 'react';
 import { LayoutGrid, GitBranch, Activity, BarChart3, Zap, Settings } from 'lucide-react';
 
-const Sidebar = ({ activeTab, setActiveTab }) => {
+const Sidebar = ({ activeTab, setActiveTab }: { activeTab: any; setActiveTab: any }) => {
 
-    const menuItems = [
+    const menuItems: any[] = [
         { name: "Dashboard", icon: LayoutGrid, value: "dashboard", },
         { name: "Signals", icon: Activity, value: "signals", },
         { name: "Automations", icon: Zap, value: "automations", },
@@ -28,9 +28,9 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
 
                     return (
                         <button
-                            key={item.value}
-                            onClick={() => setActiveTab(item.value)}
-                            className={`transition-all w-full flex items-center gap-3 px-3 py-2 rounded-lg border ${activeTab === item.value
+                            key={item?.value}
+                            onClick={() => setActiveTab(item?.value)}
+                            className={`transition-all w-full flex items-center gap-3 px-3 py-2 rounded-lg border ${activeTab === item?.value
                                 ? "text-teal-400 bg-white/5 border-white/5"
                                 : "text-white/50 hover:text-white border-transparent hover:bg-white/[0.02]"
                                 }`}
@@ -38,14 +38,14 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                             <IconComponent
                                 size={16}
                                 className={
-                                    activeTab === item.value
+                                    activeTab === item?.value
                                         ? "text-teal-400"
                                         : "text-white/40"
                                 }
                             />
 
                             <span className="hidden md:block">
-                                {item.name}
+                                {item?.name}
                             </span>
                         </button>
                     );

@@ -4,12 +4,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiTwitter, FiLinkedin, FiArrowUpRight } from 'react-icons/fi';
 const Footer = () => {
-  const links = {
+  const links: any= {
     product: ['Flow', 'Workspace', 'Signal',],
     company: ['About Us', 'Careers', 'Blog', 'Contact'],
     legal: ['Privacy Policy', 'Terms of Service', 'Security']
   };
-  const handleScroll = (e, id) => {
+  const handleScroll = (e: any, id: any) => {
     e.preventDefault();
     // setIsOpen(false);   
     const targetSection = document.getElementById(id.toLowerCase());

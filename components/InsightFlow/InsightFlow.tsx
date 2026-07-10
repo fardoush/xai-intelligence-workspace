@@ -42,7 +42,7 @@ const InsightFlow = () => {
         },
     ];
     return (
-        <section className='relative max-w-7xl mx-auto px-5 py-20 text-white md:py-32'>
+        <section className='relative max-w-7xl mx-auto px-5 py-8 md:py-14 lg:py-20 text-white '>
             {/* header  */}
             <div className="mb-14 max-w-xl md:mb-20">
                 <p className="text-xs tracking-widest uppercase text-teal-500 font-mono">The flow</p>

@@ -178,7 +178,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="font-mono-label text-primary"
+          className="font-mono-label text-teal-500"
         >
           Intelligence Workspace
         </motion.p>
@@ -195,7 +195,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.8 }}
-          className="mt-6 max-w-md text-base text-muted-foreground md:text-lg"
+          className="mt-6 max-w-md text-base text-muted-foreground "
         >
           Xai turns noise into structured intelligence, actionable insight and
           AI automations — in one workspace.
@@ -206,12 +206,7 @@ const Hero = () => {
           transition={{ delay: 1.2, duration: 1 }}
           className="absolute bottom-10 flex flex-col items-center gap-2"
         >
-          <span className="font-mono-label text-muted-foreground">Scroll to structure</span>
-          <motion.span
-            animate={{ y: [0, 6, 0] }}
-            transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-            className="block h-8 w-px bg-primary/60"
-          />
+         
         </motion.div>
       </div>
     </section>

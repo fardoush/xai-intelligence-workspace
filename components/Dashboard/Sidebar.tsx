@@ -6,10 +6,12 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
 
     const menuItems = [
         { name: "Dashboard", icon: LayoutGrid, value: "dashboard", },
-        { name: "Pipelines", icon: GitBranch, value: "pipelines" },
         { name: "Signals", icon: Activity, value: "signals", },
-        { name: "Insights", icon: BarChart3, value: "insights", },
         { name: "Automations", icon: Zap, value: "automations", },
+        { name: "Pipelines", icon: GitBranch, value: "pipelines" },
+        
+        { name: "Insights", icon: BarChart3, value: "insights", },
+        ,
         { name: "Settings", icon: Settings, value: "settings" },
     ]
     return (

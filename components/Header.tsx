@@ -6,32 +6,55 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+const [activeSection, setActiveSection] = useState('hero');
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'unset';
         return () => { document.body.style.overflow = 'unset'; };
     }, [isOpen]);
 
+    const handleScroll = (e, id) => {
+        e.preventDefault(); 
+        setIsOpen(false);  
+        const targetId = id.toLowerCase();
+        setActiveSection(targetId);
+        const targetSection = document.getElementById(id.toLowerCase());
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/5">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative z-50">
                 {/* Logo */}
-                <div className="flex items-center gap-3">
+                <a href="#hero" 
+    onClick={(e) => handleScroll(e, "hero")} 
+    className="flex items-center gap-3 cursor-pointer group">
                     <div className="bg-teal-500 text-black font-bold w-8 h-8 flex items-center justify-center rounded-[4px] text-lg">X</div>
                     <div className="font-bold text-white tracking-tight text-xl">Xai</div>
-                </div>
+                </a>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    {["FLOW", "WORKSPACE", "SIGNAL"].map((item) => (
-                        <a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
-                            className="text-xs font-medium tracking-widest text-neutral-400 hover:text-teal-400 transition-colors duration-300"
-                        >
-                            {item}
-                        </a>
-                    ))}
+                    {["FLOW", "WORKSPACE", "SIGNAL"].map((item) => {
+                        const isCurrentActive = activeSection === item.toLowerCase();
+                        return(
+                            <a
+                                key={item}
+                                href={`#${item.toLowerCase()}`}
+                                onClick={(e) => handleScroll(e, item)}
+                                className={`text-xs font-medium tracking-widest transition-colors duration-300 ${
+                                    isCurrentActive ? 'text-teal-400' : 'text-neutral-400 hover:text-teal-400'
+                                }`}
+                            >
+                                {item}
+                            </a>
+                        )
+                    })}
                 </nav>
 
                 {/* Mobile Hamburger Button */}

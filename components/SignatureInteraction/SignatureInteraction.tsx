@@ -50,7 +50,7 @@ const SignatureInteraction = () => {
     };
 
     return (
-        <div className='max-w-7xl mx-auto w-full px-5 py:20 '>
+        <div className='max-w-7xl mx-auto w-full px-5 py-8 md:py-14 lg:py-20'>
             {/* heading  and tabs button */}
             <div className="flex flex-wrap justify-between items-end  mb-6 md:mb-10 lg:mb-16">
                 <div className="md:max-w-xl">

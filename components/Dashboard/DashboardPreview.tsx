@@ -5,11 +5,14 @@ import Dashboard from './Dashboard';
 import Chart from './Chart';
 import Signal from './Signal/Signal';
 import Automations from './Automations/Automations';
+import Settings from './Settings';
+import Insights from './Insights';
+import Pipelines from './Pipelines';
 
 const DashboardPreview = () => {
     const [activeTab, setActiveTab] = useState("dashboard");
     return (
-        <div className='max-w-7xl mx-auto px-3 md:px-5 py-20 md:py-32'>
+        <div className='max-w-7xl mx-auto px-3 md:px-5 py-8 md:py-14 lg:py-20'>
             <div className="mb-14  md:mb-20">
                 <p className="text-xs tracking-widest uppercase text-teal-500 font-mono">The workspace</p>
                 <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent">
@@ -49,6 +52,21 @@ const DashboardPreview = () => {
                         {activeTab === "automations" && (
                             <Automations />
                         )}
+                        {
+                            activeTab === "pipelines" && (
+                                <Pipelines/>
+                            )
+                        }
+                        {
+                            activeTab === "insights" && (
+                                <Insights/>
+                            )
+                        }
+                        {
+                            activeTab === "settings" && (
+                                <Settings/>
+                            )
+                        }
                     </main>
                 </div>
             </div>
